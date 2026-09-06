@@ -41,3 +41,10 @@ curl -X POST http://localhost:3000/auth/login \
 curl -X POST http://localhost:3000/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"erick@email.com","password":"123456"}'
+
+
+###
+# faz o login — deve retornar o access_token
+curl -X POST http://localhost:3000/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"erick@gmail.com","password":"123456"}'
