@@ -66,4 +66,13 @@ curl http://localhost:3000/files \
 ###
 curl -X POST http://localhost:3000/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"erick@gma.com","password":"123456"}'
+  -d '{"email":"erick@gmail.com","password":"123456"}'
+
+###
+curl.exe -X POST http://localhost:3000/files/upload `
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZXJpY2tAZ21haWwuY29tIiwiaWF0IjoxNzg4ODA5ODQ3LCJleHAiOjE3ODg4MDk5MDd9.e8JgBhDDYfRV-Rb-YFbycMGCXBxlnNLNqfxLsEV3z0s" `
+  -F "file=@teste.txt"
+
+###
+curl http://localhost:3000/files \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZXJpY2tAZ21haWwuY29tIiwiaWF0IjoxNzg4ODEwNTMzLCJleHAiOjE3ODg4MTA1OTN9.1aJ3zzqA_lxXPsk_oKW3ONao__tw13XSMKh-TwXhWI4"

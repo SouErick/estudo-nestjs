@@ -1,0 +1,10 @@
+# localstack configura um s3 sem precisar de uma conta aws
+# somente para testes locais
+services:
+  localstack:
+    image: localstack/localstack:3.8
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3
+      - DEFAULT_REGION=us-east-1
